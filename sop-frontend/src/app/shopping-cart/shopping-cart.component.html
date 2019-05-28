@@ -1,0 +1,34 @@
+<div style="width: 70%; margin-right: auto; margin-left: auto;">
+  <mat-card *ngFor="let elem of products" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{elem.name}}&nbsp;x {{elem.count}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="margin-left: 15px;">
+      <p>
+        {{elem.price}} lei
+      </p>
+      <button mat-button style="font-weight: bold; color: gold; margin-top: -50px; float: right;" (click)="remove(elem.id);">Remove</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-toolbar style="">
+    <mat-toolbar-row style="display: flex; justify-content: center;">
+      <div *ngIf="!emptyCart">
+        <div>
+          <span style="text-size:15px">Total price: {{this.totalPrice}}</span>
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div *ngIf="!emptyCart">
+        <button mat-button (click)="placeOrder();">
+          <span style="font-size: 20px; color: gold; font-weight: bold;">Place order</span>
+        </button>
+      </div>
+      <div *ngIf="emptyCart">
+        <div>
+          <span style="text-size:15px">Shopping cart is empty</span>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

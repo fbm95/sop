@@ -1,0 +1,38 @@
+<div [ngStyle]="{'background-color': transparent}">
+  <mat-toolbar style="background: transparent;">
+    <mat-toolbar-row>
+      <div>
+        <button *ngIf="!isLoggedIn" mat-button (click)="btnClick('login');">
+          <b>Login</b>
+        </button>
+        <button *ngIf="isLoggedIn" mat-button>
+          <b>{{ user ? user.email : null}}</b>
+        </button>
+      </div>
+      <div>
+        <button *ngIf="!isLoggedIn" mat-button (click)="btnClick('register');">
+          <b>Sign up</b>
+        </button>
+        <button *ngIf="isLoggedIn" mat-button (click)="btnClick('order_history');">
+          <b>My orders</b>
+        </button>
+      </div>
+      <div>
+        <button mat-button (click)="btnClick('shopping-cart');">
+          <b>Shopping Cart &nbsp; [{{this.appComponent.totalProducts}}]</b>
+        </button>
+      </div>
+      <div>
+        <button *ngIf="isLoggedIn" mat-button (click)="logout();">
+          <b>Logout</b>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="container text-center" (click)="btnClick('');">
+      <span class="title">Food Takeaway</span>
+  </div>
+
+  <app-search-bar></app-search-bar>
+</div>

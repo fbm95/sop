@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+body, html {
+  height: 100%;
+  /*background-color: rgba(64, 80, 101, 0.7);*/
+  background-color: transparent;
+  overflow: overlay;
+}
+
+.md-errors-spacer { display:none; }
+
+.bg {
+  height: 60%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

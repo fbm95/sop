@@ -1,0 +1,10 @@
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
+  height: 50px;
+}
+
+.form-control::placeholder  {
+  font-family: FontAwesome;
+  font-size : 15px;
+  font-style: italic;
+}

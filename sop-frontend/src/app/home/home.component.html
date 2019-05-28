@@ -1,0 +1,16 @@
+﻿<div ng-app="app" ng-controller="testCtrl" class="container gridListdemoBasicUsage">
+  <mat-grid-list cols="3" mat-cols-sm="2" mat-cols-md="4" mat-cols-gt-md="6" mat-row-height="16:9" mat-gutter="20%"
+                 mat-gutter-gt-sm="20%" gutterSize="10%" style="margin-top: 50px; margin-bottom: 5%;">
+
+    <mat-grid-tile *ngFor="let elem of restaurants" style="background: rgba(66, 66, 66, 0.6); cursor: pointer;" (click)="btnClick('restaurant?r=' + elem.id);"> <!-- (click)="getRecord(row)" -->
+      <img src="assets/img_{{elem.id}}.png"  onError="src='assets/imgDefault.png'" style="object-fit: cover; height: auto; width: 100%;">
+       <!-- <div ng-hide="restName"> elem.name </div> -->
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+</div>
+
+
+
+

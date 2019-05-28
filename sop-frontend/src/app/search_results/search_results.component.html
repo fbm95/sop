@@ -1,0 +1,31 @@
+
+<H1> Search results for : Mada </H1>
+<p></p>
+<mat-card style="height: 120%" class="mat-elevation-z8">
+  <table mat-table *ngFor="let elem of orderHistoryObject">
+    <ng-container matColumnDef="id">
+      <td mat-cell> {{elem.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="orderDate">
+      <td mat-cell> {{elem.orderDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="address">
+      <td mat-cell> {{elem.address}} </td>
+    </ng-container>
+    <ng-container matColumnDef="foodName">
+      <td mat-cell> {{elem.foodName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="restaurantName">
+      <td mat-cell> {{elem.restaurantName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <td mat-cell> {{elem.price}} </td>
+    </ng-container>
+    <ng-container matColumnDef="quantity">
+      <td mat-cell> {{elem.weight}} </td>
+    </ng-container>
+    <mat-card-actions style="margin-left: 15px;">
+      <button mat-button style="font-weight: bold; color: gold; align: left; width:100%" (click)="seeDetails(elem.id);">Details</button>
+    </mat-card-actions>
+  </table>
+</mat-card>
